@@ -1,0 +1,56 @@
+{% extends 'advertise/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<section class="form4 cid-siKaOp1jpD mbr-fullscreen" id="form4-p">
+
+
+
+
+
+    <div class="container">
+        <div class="row content-wrapper justify-content-center">
+            <div class="col-lg-3 offset-lg-1 mbr-form" data-form-type="formoid">
+                <form action="/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="Jh4RcTPgqksKPeCKd3LUcq99y/GlEB5fpbXGfHVyj67TwSG3Y8w3rW4nBxc11DB05/HelIHE/n3L+AbRMRIgfpSP8w6EnfoQA4yDsUiJAAEaQMh3/mIezjdlISNIFgWl">
+                  {% csrf_token %}
+                    <div class="">
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling
+                            out the form!</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some
+                            problem!</div>
+                    </div>
+                    <div class="dragArea row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <h1 class="mbr-section-title mb-4 display-2">
+                                <strong>Contact Us</strong>
+                            </h1>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <p class="mbr-text mbr-fonts-style mb-4 display-7">
+                                Fill this form and we'll get back to you soon.</p>
+                        </div>
+                        <div class="col-lg-12 col-md col-12 form-group" data-for="name">
+                            <input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control" value="" id="name-form4-p">
+                        </div>
+                        <div class="col-lg-12 col-md col-12 form-group" data-for="email">
+                            <input type="email" name="email" placeholder="Email" data-form-field="email" class="form-control" value="" id="email-form4-p">
+                        </div>
+                        <div class="col-12 col-md-auto mbr-section-btn">
+                            <button type="submit" class="btn btn-secondary display-4">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-7 offset-lg-1 col-12">
+                <div class="image-wrapper">
+                  <img class="w-100" src="{% static 'assets/images/contact.png' %}" alt="Mobirise">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
