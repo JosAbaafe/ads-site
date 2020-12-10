@@ -9,12 +9,23 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-
+import environ
 import os
-import django-heroku
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+env=environ.Env(SECRET_KEY=str,)
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
+# SECURITY WARNING: keep the secret key used in production secret!
+# SECRET_KEY = env('DJANGO_SECRET_KEY')
+
+# SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = env('DJANGO_DEBUG')
+#
+# ALLOWED_HOSTS = [env('DJANGO_ALLOWED_HOSTS')]
 
 
 # Quick-start development settings - unsuitable for production
@@ -22,10 +33,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '4d9e$$=@o(kerk-3hicj3t-mcq5^v=kq=x0ps3+(x-*m@bb$&-'
-
-# SECURITY WARNING: don't run with debug turned on in production!
+#
+# # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+#
 ALLOWED_HOSTS = []
 
 
@@ -127,7 +138,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,"static_my_proj")
 ]
-STATIC_ROOT= os.path.join(os.path.dirname(BASE_DIR),"static_cdn","static_root")
+STATIC_ROOT= os.path.join(os.path.join(BASE_DIR,'static_my_proj'))
 
 MEDIA_URL='/media/'
 
