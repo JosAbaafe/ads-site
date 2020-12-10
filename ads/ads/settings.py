@@ -24,7 +24,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = env('DJANGO_DEBUG')
-#
+
 # ALLOWED_HOSTS = [env('DJANGO_ALLOWED_HOSTS')]
 
 
